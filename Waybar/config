@@ -2,23 +2,34 @@
   "layer": "top",
   "position": "top",
   "modules-left": [
-    "hyprland/workspaces",
-    "pulseaudio"
+    "hyprland/workspaces"
+//    "user"
   ],
   "modules-center":[
-    "hyprland/window",
-    "hyprland/language"
+      "wlr/taskbar"
+//    "hyprland/window",
+//    "mpd"
   ],
   "modules-right": [
+    "pulseaudio",
+//    "tray",
     "cpu",
+    "memory",
+    "temperature",
+//    "network",
+    "hyprland/language",
     "clock"
   ],
   "cpu": {},
   "clock": {
-    "format-alt": "{:%a, %d. %b  %H:%M}",
+    "format": "{:%H:%M}",
     "calendar": {
-      "mode": "year"
+      "mode": "year",
+      "on-click": "mode",
     }
+  },
+  "hyprland/language": {
+    "format": "{short}",
   },
   "hyprland/window": {
     "max-length": 50
