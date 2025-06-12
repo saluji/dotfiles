@@ -3,35 +3,39 @@
   "position": "top",
   "modules-left": [
     "hyprland/workspaces"
-//    "user"
   ],
   "modules-center":[
       "wlr/taskbar"
-//    "hyprland/window",
 //    "mpd"
   ],
   "modules-right": [
     "pulseaudio",
 //    "tray",
     "cpu",
-    "memory",
+    "custom/gpu",
     "temperature",
-//    "network",
     "hyprland/language",
     "clock"
   ],
-  "cpu": {},
+  "cpu": {
+    "format": "  {}% ",
+    "interval": 5
+  },
   "clock": {
-    "format": "{:%H:%M}",
     "calendar": {
       "mode": "year",
-      "on-click": "mode",
+      "on-click": "mode"
     }
   },
   "hyprland/language": {
-    "format": "{short}",
+    "format": "{short} "
   },
-  "hyprland/window": {
-    "max-length": 50
+  "pulseaudio": {
+    "format": "  {volume}% "
+  },
+  "temperature": {
+    "format": " {}°",
+    "interval": 5,
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input"
   }
 }
