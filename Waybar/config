@@ -4,13 +4,11 @@
   "modules-left": [
     "hyprland/workspaces"
   ],
-  "modules-center":[
-      "wlr/taskbar"
+//  "modules-center":[
 //    "mpd"
-  ],
+//  ],
   "modules-right": [
     "pulseaudio",
-//    "tray",
     "cpu",
     "custom/gpu",
     "temperature",
@@ -18,17 +16,22 @@
     "clock"
   ],
   "cpu": {
-    "format": "  {}% ",
+    "format": "  {usage}% ",
     "interval": 5
   },
   "clock": {
-    "calendar": {
-      "mode": "year",
-      "on-click": "mode"
-    }
+//    "calendar": {
+//      "mode": "year",
+//      "on-click": "mode"
+//   }
+  },
+  "custom/gpu": {
+    "format": "󰢮  {}% ",
+    "exec": "~/.config/waybar/scripts/gpu.sh",
+    "interval": 5
   },
   "hyprland/language": {
-    "format": "{short} "
+    "format": "{short}"
   },
   "pulseaudio": {
     "format": "  {volume}% "
@@ -39,3 +42,4 @@
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input"
   }
 }
+
