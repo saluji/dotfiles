@@ -4,9 +4,10 @@
   "modules-left": [
     "hyprland/workspaces"
   ],
-//  "modules-center":[
+  "modules-center":[
 //    "mpd"
-//  ],
+    "custom/japanese"
+  ],
   "modules-right": [
     "pulseaudio",
     "cpu",
@@ -16,7 +17,7 @@
     "clock"
   ],
   "cpu": {
-    "format": "  {usage}% ",
+    "format": " {usage}%",
     "interval": 5
   },
   "clock": {
@@ -26,7 +27,7 @@
 //   }
   },
   "custom/gpu": {
-    "format": "󰢮  {}% ",
+    "format": "󰢮 {}%",
     "exec": "~/.config/waybar/scripts/gpu.sh",
     "interval": 5
   },
@@ -37,10 +38,13 @@
 //     ""
 //  },
   "pulseaudio": {
-    "format": "  {volume}% "
+    "format": " {volume}%"
+  },
+  "custom/japanese": {
+  "format": "癒し系"
   },
   "temperature": {
-    "format": " {temperatureC}°",
+    "format": "{temperatureC}°",
     "interval": 5,
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input"
   }
