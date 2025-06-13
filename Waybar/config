@@ -5,26 +5,25 @@
     "hyprland/workspaces"
   ],
   "modules-center":[
-//    "mpd"
-    "custom/japanese"
+    "mpd"
   ],
   "modules-right": [
+    "hyprland/language",
     "pulseaudio",
     "cpu",
     "custom/gpu",
     "temperature",
-    "hyprland/language",
     "clock"
   ],
-  "cpu": {
-    "format": " {usage}%",
-    "interval": 5
-  },
   "clock": {
 //    "calendar": {
 //      "mode": "year",
 //      "on-click": "mode"
 //   }
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 5
   },
   "custom/gpu": {
     "format": "󰢮 {}%",
@@ -35,13 +34,11 @@
     "format": "{short}"
   },
 //  "hyprland/workspaces": {
-//     ""
+//    "format": "{name}"
 //  },
+  "mpd": {},
   "pulseaudio": {
     "format": " {volume}%"
-  },
-  "custom/japanese": {
-  "format": "癒し系"
   },
   "temperature": {
     "format": "{temperatureC}°",

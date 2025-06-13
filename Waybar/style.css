@@ -2,15 +2,10 @@
   font-family: "FiraCode Nerd Font", "Yuji Syuku", "Noto Sans CJK JP", sans-serif;
   font-size: 13px;
 }
+
 window#waybar {
   background-color: rgba(254, 192, 186, 0.75);
   color: #654739;
-  transition-property: background-color;
-  transition-duration: .5s;
-}
-
-window#waybar.hidden {
-  opacity: 0.2;
 }
 
 #workspaces button {
@@ -31,3 +26,12 @@ window#waybar.hidden {
   color: rgba(254, 192, 186, 1.0);
 }
 
+#clock,
+#cpu,
+#custom-gpu,
+#hyprland-language,
+#mpd,
+#pulseaudio,
+#temperature {
+  margin: 0 8px;
+}
