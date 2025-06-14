@@ -38,7 +38,7 @@
 //  },
   "mpd": {},
   "pulseaudio": {
-    "format": " {volume}%"
+    "format": "  {volume}%"
   },
   "temperature": {
     "format": " {temperatureC}°",
