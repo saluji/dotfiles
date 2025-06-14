@@ -1,0 +1,16 @@
+/*
+@name My Soft Pink Theme
+@version 1.0
+@description Minimal theme with soft pink background
+*/
+
+:root {
+  --background-primary: #fff0f1;
+  --background-secondary: #fff0f1;
+  --background-tertiary: #fff0f1;
+  --background-floating: #fff0f1;
+}
+
+body {
+  background-color: #fff0f1;
+}
