@@ -38,11 +38,12 @@
 //  },
   "mpd": {},
   "pulseaudio": {
-    "format": " {volume}%"
+    "format": " {volume}%"
   },
   "temperature": {
-    "format": "{temperatureC}°",
+    "format": " {temperatureC}°",
     "interval": 5,
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input"
   }
 }
+
