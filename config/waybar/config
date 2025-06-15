@@ -16,10 +16,7 @@
     "clock"
   ],
   "clock": {
-//    "calendar": {
-//      "mode": "year",
-//      "on-click": "mode"
-//   }
+    "format": " {:%H:%M}"
   },
   "cpu": {
     "format": " {usage}%",
@@ -33,12 +30,9 @@
   "hyprland/language": {
     "format": "{short}"
   },
-//  "hyprland/workspaces": {
-//    "format": "{name}"
-//  },
   "mpd": {},
-  "pulseaudio": {
-    "format": "  {volume}%"
+    "pulseaudio": {
+    "format": " {volume}%"
   },
   "temperature": {
     "format": " {temperatureC}°",
@@ -47,3 +41,4 @@
   }
 }
 
+>
