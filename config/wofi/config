@@ -1,0 +1,11 @@
+show = drun
+term = kitty
+#prompt = hi
+width = 40%
+lines = 8
+show_icons = true
+no_scrollbar = true
+location = center
+insensitive = true
+sort_order = default
+gtk_dark = false
