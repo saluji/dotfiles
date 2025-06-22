@@ -13,7 +13,8 @@
     "cpu",
     "custom/gpu",
     "temperature",
-    "clock"
+    "clock",
+    "custom/power"
   ],
   "clock": {
     "format": " {:%H:%M}"
@@ -21,6 +22,14 @@
   "cpu": {
     "format": " {usage}%",
     "interval": 5
+  },
+  "custom/power": {
+    "exec": "echo '⏻ '",
+    "interval": 0,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/power-menu.sh",
+    "format": "{}",
+    "class": "power-button"
   },
   "custom/gpu": {
     "format": "󰢮 {}%",
@@ -41,4 +50,3 @@
   }
 }
 
->
