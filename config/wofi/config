@@ -1,6 +1,5 @@
 show = drun
 term = kitty
-#prompt = hi
 width = 40%
 lines = 8
 show_icons = true
