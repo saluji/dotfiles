@@ -1,0 +1,181 @@
+## Monitor
+monitor = ,1920x1080@60,0x0,1
+
+
+## Variables
+$mainMod = SUPER
+$terminal = kitty
+$fileManager = dolphin
+$discord = vesktop
+$browser = firefox
+
+
+## Autostart
+exec-once = firefox
+exec-once = kitty
+exec-once = mako
+exec-once = waybar
+exec-once = cliphist daemon
+exec-once = swww-daemon
+exec-once = hypridle
+exec-once = swww img ~/Pictures/wallpaper/megumi00.jpg
+
+
+## Switch keyboard layout
+bind = SHIFT $mainMod, LESS, exec, hyprctl switchxkblayout "sigmachip-usb-keyboard" next
+
+
+# Shortcut
+bind = CTRL $mainMod, T, exec, $terminal
+bind = CTRL $mainMod, E, exec, $fileManager
+bind = CTRL $mainMod, F, exec, $browser
+bind = CTRL $mainMod, D, exec, $discord
+bind = CTRL $mainMod, S, exec, steam
+bind = CTRL $mainMod, G, exec, godot
+bind = CTRL $mainMod, C, exec, hyprpicker | wl-copy
+bind = CTRL $mainMod, W, exec, waybar
+#bind = CTRL $mainMod ALT, W, exec, gtklock
+bind = CTRL $mainMod ALT, W, exec, pkill waybar
+bind = CTRL $mainMod, SPACE, exec, wofi --show drun
+bind = CTRL $mainMod ALT, S, exec, systemctl suspend
+bind = CTRL $mainMod ALT, Q, exec, poweroff
+bind = CTRL $mainMod ALT, R, exec, reboot
+
+# Window behaviour
+bind = CTRL ALT $mainMod, X, killactive,
+bind = CTRL $mainMod, RETURN, fullscreen, 1
+bind = CTRL SHIFT $mainMod, RETURN, fullscreen, 0
+bind = CTRL SHIFT $mainMod, F, togglefloating, active
+bind = ALT $mainMod, TAB, cyclenext
+bind = ALT SHIFT $mainMod, TAB, cyclenext, prev
+
+# Focus & Positioning
+bind = CTRL $mainMod, I, movefocus, u
+bind = CTRL $mainMod, K, movefocus, d
+bind = CTRL $mainMod, J, movefocus, l
+bind = CTRL $mainMod, L, movefocus, r
+bind = CTRL $mainMod, UP, movewindow, u
+bind = CTRL $mainMod, DOWN, movewindow, d
+bind = CTRL $mainMod, LEFT, movewindow, l
+bind = CTRL $mainMod, RIGHT, movewindow, r
+
+# Resize
+bind = CTRL SHIFT $mainMod, UP, resizeactive, 0 -10%
+bind = CTRL SHIFT $mainMod, DOWN, resizeactive, 0 10%
+bind = CTRL SHIFT $mainMod, RIGHT, resizeactive, 10% 0
+bind = CTRL SHIFT $mainMod, LEFT, resizeactive, -10% 0
+
+# Workspace
+bind = CTRL $mainMod, 1, workspace, 1
+bind = CTRL $mainMod, 2, workspace, 2
+bind = CTRL $mainMod, 3, workspace, 3
+bind = CTRL $mainMod, 4, workspace, 4
+bind = CTRL $mainMod, 5, workspace, 5
+bind = CTRL $mainMod, 6, workspace, 6
+bind = CTRL $mainMod, 7, workspace, 7
+bind = CTRL $mainMod, 8, workspace, 8
+bind = CTRL $mainMod, 9, workspace, 9
+bind = CTRL ALT $mainMod, 1, movetoworkspace, 1
+bind = CTRL ALT $mainMod, 2, movetoworkspace, 2
+bind = CTRL ALT $mainMod, 3, movetoworkspace, 3
+bind = CTRL ALT $mainMod, 4, movetoworkspace, 4
+bind = CTRL ALT $mainMod, 5, movetoworkspace, 5
+bind = CTRL ALT $mainMod, 6, movetoworkspace, 6
+bind = CTRL ALT $mainMod, 7, movetoworkspace, 7
+bind = CTRL ALT $mainMod, 8, movetoworkspace, 8
+bind = CTRL ALT $mainMod, 9, movetoworkspace, 9
+bind = CTRL SHIFT $mainMod, 1, movetoworkspacesilent, 1
+bind = CTRL SHIFT $mainMod, 2, movetoworkspacesilent, 2
+bind = CTRL SHIFT $mainMod, 3, movetoworkspacesilent, 3
+bind = CTRL SHIFT $mainMod, 4, movetoworkspacesilent, 4
+bind = CTRL SHIFT $mainMod, 5, movetoworkspacesilent, 5
+bind = CTRL SHIFT $mainMod, 6, movetoworkspacesilent, 6
+bind = CTRL SHIFT $mainMod, 7, movetoworkspacesilent, 7
+bind = CTRL SHIFT $mainMod, 8, movetoworkspacesilent, 8
+bind = CTRL SHIFT $mainMod, 9, movetoworkspacesilent, 9
+
+
+## Environment variables
+env = XDG_CURRENT_DESKTOP,Hyprland
+env = XDG_SESSION_TYPE,wayland
+env = XDG_SESSION_DESKTOP,Hyprland
+env = GDK_BACKEND,wayland,x11,*
+env = QT_QPA_PLATFORM,wayland;xcb
+env = MOZ_ENABLE_WAYLAND,1
+env = MOZ_DISABLE_RDD_SANDBOX,1
+
+
+## Window rule
+windowrule = suppressevent fullscreen maximize, class:.*
+windowrule = opacity 0.8 override 0.7 override,class:^($terminal)$
+windowrule = workspace 2, class:^($discord)$
+windowrule = workspace 3, class:^(steam)$
+
+
+## Ricing
+
+# General
+general {
+  border_size = 0
+  gaps_in = 10
+  gaps_out = 20
+  layout = dwindle
+  resize_on_border = true
+  allow_tearing = false
+}
+
+# Decoration, Blur & Shadow
+decoration{
+  rounding = 10
+  rounding_power = 2.0
+  inactive_opacity = 0.9
+  border_part_of_window = true
+  blur{
+      enabled = true
+      size = 5
+      contrast = 1.0
+      brightness = 1.0
+      vibrancy = 1.0
+  }
+  shadow{
+    enabled = true
+    range = 5
+    render_power = 1
+    color = rgba(9e4b4acc)
+    color_inactive = rgba(9141ac88)
+  }
+}
+
+# Animation
+animations{
+  enabled = true
+  bezier = easeInOutSine,0.445,0.05,0.55,0.95
+  bezier = easeInSine,0.47,0,0.745,0.715
+  bezier = easeOutSine,0.39,0.575,0.565,1
+  animation = windows, 1, 5, easeInOutSine, popin
+  animation = layers, 1, 10, easeInSine, fade
+  animation = fadeSwitch, 1, 2, easeInOutSine
+  animation = fadeShadow, 1, 5, easeInOutSine
+  animation = fadeDim, 1, 2, easeInOutSine
+  animation = border, 1, 10, easeOutSine
+  animation = borderangle, 1, 10, easeOutSine, once
+  animation = workspaces, 1, 5, easeInOutSine, fade
+}
+
+# Input
+input {
+  kb_layout = us,de
+  kb_variant = ,
+  numlock_by_default = true
+  repeat_rate = 25
+  repeat_delay = 200
+  follow_mouse = 2
+  mouse_refocus = false
+}
+
+# Cursor
+cursor {
+  inactive_timeout = 1
+  no_warps = true
+  hide_on_key_press = true
+}
