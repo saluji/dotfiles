@@ -1,0 +1,74 @@
+/* Transparent, soft pink background when visible */
+window:not(.hidden) {
+  background-image: url("/home/saluji/Pictures/wallpaper/megumi01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Text labels (e.g., wrong password) */
+label {
+  font-family: "FiraCode Nerd Font Mono", sans-serif;
+  font-size: 28px;
+  font-size: 28px;
+  color: rgba(255, 200, 180, 1.0);
+  text-shadow:
+    -1px -1px 0 rgba(40, 20, 20, 0.8),
+    1px -1px 0 rgba(40, 20, 20, 0.8),
+    -1px 1px 0 rgba(40, 20, 20, 0.8),
+    1px 1px 0 rgba(40, 20, 20, 0.8);
+}
+
+/* Prompt container (e.g., login form) */
+#prompt {
+  background-color: rgba(255, 240, 241, 0.9); /* Subtle pinkish panel */
+  border-radius: 14px;
+  padding: 24px;
+  border: 2px solid rgba(255, 209, 193, 0.9); /* Soft pink border */
+}
+
+/* Input field (password entry) */
+entry {
+  font-family: "FiraCode Nerd Font Mono", sans-serif;
+  font-size: 24px;
+  color: rgba(80, 40, 40, 0.9); /* Deep brownish-pink */
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(254, 192, 186, 1.0);
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Clock styling */
+#clock {
+  font-family: "FiraCode Nerd Font Mono", sans-serif;
+  font-size: 36px;
+  color: rgba(254, 192, 186, 1.0); /* Light pink accent */
+}
+
+/* User list block (if shown) */
+#user-list {
+  background-color: rgba(255, 248, 247, 0.85);
+  border-radius: 10px;
+  padding: 12px;
+  border: 2px solid rgba(255, 209, 193, 0.9);
+}
+
+/* User list buttons */
+#user-list button {
+  font-family: "FiraCode Nerd Font Mono", sans-serif;
+  font-size: 20px;
+  color: rgba(80, 40, 40, 0.9);
+  background-color: rgba(255, 240, 241, 0.9);
+  border: 2px solid rgba(255, 209, 193, 0.9);
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 6px;
+}
+
+/* Hover effect for buttons */
+#user-list button:hover {
+  background-color: rgba(254, 192, 186, 0.8);
+  color: rgba(40, 20, 20, 1.0);
+}
